@@ -1,0 +1,75 @@
+.context-menu-overlay {
+    position: fixed;
+    inset: 0;
+    z-index: 400;
+}
+
+.context-menu {
+    position: fixed;
+    background: rgba(44, 44, 46, 0.95);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: var(--radius-lg);
+    padding: var(--space-xs);
+    min-width: 200px;
+    max-width: 260px;
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.55);
+    backdrop-filter: blur(50px) saturate(200%);
+    -webkit-backdrop-filter: blur(50px) saturate(200%);
+    animation: fadeInScale 0.12s ease;
+    z-index: 401;
+}
+
+.context-menu-item {
+    display: flex;
+    align-items: center;
+    gap: var(--space-md);
+    width: 100%;
+    padding: 9px var(--space-md);
+    border-radius: var(--radius-sm);
+    font-size: 0.8125rem;
+    font-weight: 500;
+    color: var(--color-text-primary);
+    transition: background var(--transition-fast);
+    text-align: left;
+}
+
+.context-menu-item:hover {
+    background: rgba(255, 255, 255, 0.08);
+}
+
+.context-menu-item svg {
+    width: 15px;
+    height: 15px;
+    flex-shrink: 0;
+}
+
+.context-menu-danger {
+    color: var(--color-error);
+}
+
+.context-menu-divider {
+    height: 1px;
+    background: rgba(255, 255, 255, 0.06);
+    margin: 3px 0;
+}
+
+.context-menu-label {
+    font-size: 0.6875rem;
+    font-weight: 600;
+    color: var(--color-text-tertiary);
+    padding: 6px var(--space-md) 3px;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+}
+
+.context-menu-playlist {
+    font-size: 0.8125rem;
+    padding: 7px var(--space-md);
+}
+
+.playlist-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    flex-shrink: 0;
+}
